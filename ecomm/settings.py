@@ -77,31 +77,27 @@ SOCIALACCOUNT_PROVIDERS = {
 
     # Facebook authentication
     "facebook": {
-        'APP': {
-            # Facebook API KEYS
-            'client_id': SOCIAL_AUTH_FACEBOOK_KEY,
-            'secret': SOCIAL_AUTH_FACEBOOK_SECRET,
-        },
-        'METHOD': 'oauth2',  # Set to 'js_sdk' to use the Facebook connect SDK
-        'SDK_URL': '//connect.facebook.net/{locale}/sdk.js',
-        'SCOPE': ['email', 'public_profile'],
-        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
-        'INIT_PARAMS': {'cookie': True},
-        'FIELDS': [
-            'id',
-            'first_name',
-            'last_name',
-            'middle_name',
-            'name',
-            'name_format',
-            'picture',
-            'short_name',
-        ],
-        'EXCHANGE_TOKEN': True,
-        'VERIFIED_EMAIL': False,
-        'VERSION': 'v17.0',
-        'GRAPH_API_URL': 'https://graph.facebook.com/v17.0',
-    }
+    'METHOD': 'oauth2',
+    'SDK_URL': '//connect.facebook.net/{locale}/sdk.js',
+    'SCOPE': ['email', 'public_profile'],
+    'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+    'INIT_PARAMS': {'cookie': True},
+    'FIELDS': [
+        'id',
+        'first_name',
+        'last_name',
+        'middle_name',
+        'name',
+        'name_format',
+        'picture',
+        'short_name',
+    ],
+    'EXCHANGE_TOKEN': True,
+    'VERIFIED_EMAIL': False,
+    'VERSION': 'v17.0',
+    'GRAPH_API_URL': 'https://graph.facebook.com/v17.0',
+}
+
 }
 
 MIDDLEWARE = [

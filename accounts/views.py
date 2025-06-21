@@ -187,7 +187,7 @@ def cart(request):
         cart_obj.razorpay_order_id = payment['id']
         cart_obj.save()
 
-    context = {'cart': cart_obj, 'payment': payment, 'quantity_range': range(1, 6), }
+    context = {'cart': cart_obj, 'payment': payment, 'quantity_range': range(1, 6),'RAZORPAY_KEY_ID': settings.RAZORPAY_KEY_ID }
     return render(request, 'accounts/cart.html', context)
 
 
